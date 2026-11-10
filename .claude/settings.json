@@ -1,0 +1,70 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/format-ts.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm run typecheck)",
+      "Bash(npm run lint)",
+      "Bash(npm run lint *)",
+      "Bash(npm run test)",
+      "Bash(npm run test *)",
+      "Bash(npm test)",
+      "Bash(npm test *)",
+      "Bash(npm run format)",
+      "Bash(npm run format *)",
+      "Bash(npm run verify)",
+      "Bash(npx --no-install prettier *)",
+      "Bash(npx --no-install eslint *)",
+      "Bash(npx --no-install tsc *)",
+      "Bash(npx --no-install jest *)",
+      "Bash(npx expo-doctor)",
+      "Bash(npx expo config *)",
+      "Bash(npx expo export *)",
+      "Bash(npx expo install *)",
+      "Bash(npx expo prebuild *)",
+      "Bash(git status)",
+      "Bash(git status *)",
+      "Bash(git diff)",
+      "Bash(git diff *)",
+      "Bash(git log)",
+      "Bash(git log *)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(!.env*.example)",
+      "Read(**/*.jks)",
+      "Read(**/*.keystore)",
+      "Read(**/key.properties)",
+      "Read(**/google-services.json)",
+      "Read(**/GoogleService-Info.plist)",
+      "Read(**/*.p12)",
+      "Read(**/*.mobileprovision)",
+      "Read(**/credentials.json)",
+      "Read(**/*.pem)",
+      "Edit(.env)",
+      "Edit(.env.*)",
+      "Edit(!.env*.example)",
+      "Edit(**/*.jks)",
+      "Edit(**/*.keystore)",
+      "Edit(**/key.properties)",
+      "Edit(**/google-services.json)",
+      "Edit(**/GoogleService-Info.plist)",
+      "Edit(**/*.p12)",
+      "Edit(**/*.mobileprovision)",
+      "Edit(**/credentials.json)",
+      "Edit(**/*.pem)"
+    ]
+  }
+}

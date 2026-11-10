@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [".claude/knowledge/critical-constraints.md"],
+  "mcp": {
+    "expo": {
+      "type": "remote",
+      "url": "https://mcp.expo.dev/mcp"
+    },
+    "figma": {
+      "type": "remote",
+      "url": "http://127.0.0.1:3845/mcp"
+    }
+  },
+  "permission": {
+    "read": {
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env*.example": "allow",
+      "*.jks": "deny",
+      "*.keystore": "deny",
+      "*key.properties": "deny",
+      "*google-services.json": "deny",
+      "*GoogleService-Info.plist": "deny",
+      "*.p12": "deny",
+      "*.mobileprovision": "deny",
+      "*credentials.json": "deny",
+      "*.pem": "deny"
+    },
+    "edit": {
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env*.example": "allow",
+      "*.jks": "deny",
+      "*.keystore": "deny",
+      "*key.properties": "deny",
+      "*google-services.json": "deny",
+      "*GoogleService-Info.plist": "deny",
+      "*.p12": "deny",
+      "*.mobileprovision": "deny",
+      "*credentials.json": "deny",
+      "*.pem": "deny"
+    }
+  }
+}
